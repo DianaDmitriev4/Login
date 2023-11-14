@@ -132,7 +132,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="loginButtonAction:" destination="Dk4-GC-hFR" eventType="touchUpInside" id="pqr-5E-0na"/>
-                                            <segue destination="Mwh-e6-bZs" kind="show" id="bqo-G7-FVC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -183,8 +182,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="rp1-Dl-G92"/>
                     <connections>
-                        <outlet property="emailImageView" destination="iUD-H1-RLK" id="dRZ-ih-p4B"/>
                         <outlet property="emailTextField" destination="I6l-pb-RaX" id="rPF-oB-GtQ"/>
+                        <outlet property="envelopeImageView" destination="iUD-H1-RLK" id="UYK-Rl-tfe"/>
                         <outlet property="lockImageView" destination="mWP-to-VoG" id="WID-5w-Sgj"/>
                         <outlet property="loginButton" destination="5FY-tl-doo" id="8SC-fh-D3R"/>
                         <outlet property="missingAccount" destination="CzP-LJ-dwi" id="3TC-dg-qNM"/>
@@ -192,6 +191,7 @@
                         <outlet property="signupButton" destination="IKC-qd-QyU" id="4YD-Gl-sn9"/>
                         <outlet property="underscoreEmail" destination="7Js-uq-gDs" id="SyR-Sz-9HQ"/>
                         <outlet property="underscorePassword" destination="b4a-Ub-RY3" id="DYX-rz-JOb"/>
+                        <segue destination="Mwh-e6-bZs" kind="show" identifier="goToHomePage" id="LhG-wP-2ti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZY-7l-RhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
