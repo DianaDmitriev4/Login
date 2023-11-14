@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; configuration.title = "LOGIN"; ObjectID = "5FY-tl-doo"; */
+"5FY-tl-doo.configuration.title" = "LOGIN";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5FY-tl-doo"; */
+"5FY-tl-doo.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Don't have an account?"; ObjectID = "CzP-LJ-dwi"; */
+"CzP-LJ-dwi.text" = "Don't have an account?";
+
+/* Class = "UITextField"; placeholder = "e-mail"; ObjectID = "I6l-pb-RaX"; */
+"I6l-pb-RaX.placeholder" = "e-mail";
+
+/* Class = "UIButton"; configuration.title = "Signup here"; ObjectID = "IKC-qd-QyU"; */
+"IKC-qd-QyU.configuration.title" = "Signup here";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IKC-qd-QyU"; */
+"IKC-qd-QyU.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "WXS-Jf-bag"; */
+"WXS-Jf-bag.placeholder" = "password";
