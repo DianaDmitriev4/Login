@@ -1,2 +1,2 @@
 # Login
-![loginScreen]https://github.com/DianaDmitriev4/Login/blob/main/loginScreen.png
+![loginScreen](https://github.com/DianaDmitriev4/Login/blob/main/loginScreen.png)
