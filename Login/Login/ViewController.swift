@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var lockImageView: UIImageView!
     
     //MARK: - Properties
+    var isLogin = true
     private let activeColor = UIColor(named: "activeColor") ?? UIColor.gray
     private let shadowColor = (UIColor(named: "activeColor") ?? UIColor.black).cgColor
     private var email = "" {
@@ -44,6 +45,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        missingAccount.isHidden = !isLogin
+        signupButton.isHidden = !isLogin
+        
         configureButton()
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -63,20 +67,30 @@ class ViewController: UIViewController {
             makeErrorField(textField: passwordTextField)
         }
         
-        if email == mockEmail,
-           password == mockPassword {
-            performSegue(withIdentifier: "goToHomePage", sender: sender)
+        if isLogin {
+            if KeychainManager.checkUser(with: email, password: password) {
+                performSegue(withIdentifier: "goToHomePage", sender: sender)
+            } else {
+                let alert = UIAlertController(title: "Error".localized,
+                                              message: "Wrong password or e-mail".localized,
+                                              preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK".localized, style: .default)
+                alert.addAction(action)
+                present(alert, animated: true)
+            }
         } else {
-            let alert = UIAlertController(title: "Error".localized,
-                                          message: "Wrong password or e-mail".localized,
-                                          preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK".localized, style: .default)
-            alert.addAction(action)
-            present(alert, animated: true)
+            if KeychainManager.save(email: email, password: password) {                performSegue(withIdentifier: "goToHomePage", sender: sender)
+            } else {
+                debugPrint("Error with saving email and password")
+            }
         }
     }
     
-    @IBAction private func signupButton(_ sender: UIButton) { }
+    @IBAction private func signupButton(_ sender: UIButton) {
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+        vc.isLogin = false
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     //MARK: - Methods
     private func configureButton() {
@@ -91,6 +105,8 @@ class ViewController: UIViewController {
         loginButton.isUserInteractionEnabled = false
         loginButton.backgroundColor = .gray
        
+        loginButton.setTitle(isLogin ? "Login".localized.uppercased() : "Register".localized.uppercased(),
+                             for: .normal)
     }
 }
 

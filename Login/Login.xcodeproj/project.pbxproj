@@ -16,6 +16,7 @@
 		CE801DCF2AFE85C80054F427 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE801DCE2AFE85C80054F427 /* SecondVC.swift */; };
 		CE801DD52B039A620054F427 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE801DD72B039A620054F427 /* Localizable.strings */; };
 		CE801DDA2B039A8C0054F427 /* StringExtens.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE801DD92B039A8C0054F427 /* StringExtens.swift */; };
+		CEE3315B2B53CD7B00D2EF1B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3315A2B53CD7B00D2EF1B /* KeychainManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CE801DD62B039A620054F427 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE801DD82B039A640054F427 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE801DD92B039A8C0054F427 /* StringExtens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtens.swift; sourceTree = "<group>"; };
+		CEE3315A2B53CD7B00D2EF1B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				CE801DBA2AFE616C0054F427 /* AppDelegate.swift */,
 				CE801DBC2AFE616C0054F427 /* SceneDelegate.swift */,
+				CEE3315A2B53CD7B00D2EF1B /* KeychainManager.swift */,
 				CE801DBE2AFE616C0054F427 /* ViewController.swift */,
 				CE801DCE2AFE85C80054F427 /* SecondVC.swift */,
 				CE801DD92B039A8C0054F427 /* StringExtens.swift */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE801DDA2B039A8C0054F427 /* StringExtens.swift in Sources */,
+				CEE3315B2B53CD7B00D2EF1B /* KeychainManager.swift in Sources */,
 				CE801DBF2AFE616C0054F427 /* ViewController.swift in Sources */,
 				CE801DBB2AFE616C0054F427 /* AppDelegate.swift in Sources */,
 				CE801DCF2AFE85C80054F427 /* SecondVC.swift in Sources */,
